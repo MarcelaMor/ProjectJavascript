@@ -16,6 +16,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    document.getElementById("answer-box").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            checkAnswer();
+        }
+    });
+
     runGame("addition");
 
 });
@@ -27,8 +33,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function runGame(gameType) {
 
-    /* Creates two random numbers between 1 and 25 */
-    
+    document.getElementById("answer-box").value = "";
+    document.getElementById("answer-box").focus();
+
+/* Creates two random numbers between 1 and 25 */
+
     let num1 = Math.floor(Math.random() * 25) + 1;
     let num2 = Math.floor(Math.random() * 25) + 1;
 
@@ -57,11 +66,10 @@ function checkAnswer() {
     let isCorrect = userAnswer === calculatedAnswer[0];
 
     if (isCorrect) {
-        alert("Ooh! Very good, Thats right! ");
+        alert("Ooh! Very good, thats right!");
         incrementScore();
-
     } else {
-        alert(`Awww to bad.... you answered ${userAnswer}. The correct answer is ${calculatedAnswer[0]}!`);
+        alert(`Awww to bad, its wrong ${userAnswer}. The correct answer is ${calculatedAnswer[0]}!`);
         incrementWrongAnswer();
     }
 
@@ -73,7 +81,6 @@ function checkAnswer() {
  * Gets the operands (the numbers) and the operator (plus, minus etc)
  * directly from the DOM and returns correct answer
  */
-
 
 function calculateCorrectAnswer() {
 
@@ -89,7 +96,7 @@ function calculateCorrectAnswer() {
 
     } else if (operator === "-") {
         return [operand1 - operand2, "subtract"];
-
+        
     } else {
         alert(`Unimplemented operator ${operator}`);
         throw `Unimplemented operator ${operator}. Aborting!`;
