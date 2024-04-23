@@ -1,4 +1,4 @@
-/* --------- Global style */
+/* --------- Global style-------*/
 
 body {
     background-color: white;
@@ -7,7 +7,7 @@ body {
     text-align: center;
 }
 
-/* --------- Heading */
+/* --------- Heading--------- */
 
 .heading {
     text-align: center;
@@ -84,7 +84,7 @@ body {
     padding: 25px;
 }
 
-/* --------- Buttons--------- */
+/* --------- Buttons-------- */
 
 .btn {
     width: 220px;
@@ -120,8 +120,8 @@ body {
 }
 
 .btn--blue {
-    border-color: blue;
-    color: blue;
+    border-color: rgb(69, 69, 132);
+    color: rgb(60, 60, 121);
 }
 
 .btn--blue:active,
@@ -131,30 +131,30 @@ body {
 }
 
 .btn--orange {
-    border-color: orange;
-    color: orange;
+    border-color: rgb(142, 92, 31);
+    color: rgb(139, 93, 8);
 }
 
 .btn--orange:active,
 .btn--orange:hover {
-    background-color: darkorange;
+    background-color: rgb(136, 63, 7);
     color: white;
 }
 
 .btn--red {
-    border-color: red;
-    color: red;
+    border-color: rgb(106, 20, 75);
+    color: rgb(99, 21, 73);
 }
 
 .btn--red:active,
 .btn--red:hover {
-    background-color: darkred;
+    background-color: rgb(136, 29, 111);
     color: white;
 }
 
 .btn--green {
-    border-color: green;
-    color: green;
+    border-color: rgb(4, 59, 4);
+    color: rgb(27, 73, 27);
 }
 
 .btn--green:active,
@@ -175,7 +175,8 @@ body {
     background-color: #0d1013;
 }
 
-/* --------- Media queries---------- */
+/* --------- Media queries------- */
+
 
 @media (max-width: 414px) {
     .controls-area {
@@ -231,6 +232,7 @@ body {
         font-size: 2rem;
     }
 }
+
 
 @media (max-width: 320px) {
     .game-area {
